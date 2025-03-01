@@ -7,7 +7,7 @@
   <!-- Font Awesome CDN for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* Reset and base styles */
+    /* Reset and Base Styles */
     * {
       margin: 0;
       padding: 0;
@@ -51,13 +51,13 @@
     nav a:hover {
       color: #d1d1d1;
     }
-    /* Main container */
+    /* Main Container */
     .container {
       max-width: 1200px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    /* Hero Section */
+    /* Hero / About Section */
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -117,6 +117,33 @@
       margin: 40px 0 20px;
       font-size: 2em;
       color: #667eea;
+    }
+    /* Education & Work Experience Sections */
+    .education, .work-experience {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+      margin-bottom: 40px;
+    }
+    .education-card, .experience-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .education-card:hover, .experience-card:hover {
+      transform: translateY(-10px);
+    }
+    .education-card h3, .experience-card h3 {
+      color: #764ba2;
+      margin-bottom: 10px;
+    }
+    .education-card p, .experience-card p {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 5px;
     }
     /* Certifications Section */
     .certifications {
@@ -181,7 +208,7 @@
       background-color: #f1f1f1;
       margin-top: 40px;
     }
-    /* Responsive adjustments */
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2em;
@@ -202,6 +229,8 @@
     <p>Agile-Driven Project Manager | Scrum Master | Healthcare & IT Specialist</p>
     <nav>
       <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#work-experience">Experience</a>
       <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -226,6 +255,42 @@
           <a href="https://www.linkedin.com/in/karthik-marupaka-01071525a/" target="_blank">
             <i class="fab fa-linkedin"></i> LinkedIn Profile
           </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="education">
+        <div class="education-card">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p>XYZ University</p>
+          <p>2010 - 2014</p>
+        </div>
+        <div class="education-card">
+          <h3>Master of Science in Information Technology</h3>
+          <p>ABC University</p>
+          <p>2015 - 2017</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Work Experience Section -->
+    <section id="work-experience">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="work-experience">
+        <div class="experience-card">
+          <h3>Senior Project Manager</h3>
+          <p>Company A</p>
+          <p>2018 - Present</p>
+          <p>Leading cross-functional teams and managing high-impact projects in healthcare and IT.</p>
+        </div>
+        <div class="experience-card">
+          <h3>Project Manager</h3>
+          <p>Company B</p>
+          <p>2014 - 2018</p>
+          <p>Managed projects from inception to completion with a focus on Agile methodologies.</p>
         </div>
       </div>
     </section>

@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karthik Marupaka | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f2f5, #ffffff);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 2em;
+      color: #667eea;
+    }
+    .case-study {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .accordion {
+      background-color: #764ba2;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.2em;
+      transition: 0.4s;
+      border-radius: 5px;
+    }
+    .active, .accordion:hover {
+      background-color: #5a3d91;
+    }
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Karthik Marupaka</h1>
+    <p>Agile-Driven Project Manager | Scrum Master | Healthcare & IT Specialist</p>
+  </header>
+  
+  <div class="container">
+    <section id="case-studies">
+      <h2 class="section-title">Case Studies</h2>
+      <div class="case-study">
+        <button class="accordion">Successful Agile Delivery of a Healthcare Scheduling Mobile Application</button>
+        <div class="panel">
+          <h3>Project Overview</h3>
+          <p><strong>Industry:</strong> Healthcare Technology</p>
+          <p><strong>Role:</strong> Scrum Master</p>
+          <p>Developed a mobile app enabling patients to book and manage medical appointments.</p>
+          
+          <h3>Challenges</h3>
+          <ul>
+            <li>Unclear requirements from multiple stakeholders.</li>
+            <li>Ensuring HIPAA compliance and data security.</li>
+            <li>Dependency on third-party APIs for hospital integration.</li>
+            <li>Slow feedback loops causing misalignment.</li>
+          </ul>
+          
+          <h3>Approach</h3>
+          <ul>
+            <li>Implemented Agile best practices and improved backlog refinement.</li>
+            <li>Facilitated stakeholder collaboration through Sprint Reviews.</li>
+            <li>Introduced CI/CD and automated testing, reducing regression by 40%.</li>
+          </ul>
+          
+          <h3>Outcome & Impact</h3>
+          <ul>
+            <li>Successfully launched the app within 6 months.</li>
+            <li>Reduced booking errors by 50% and increased efficiency by 40%.</li>
+            <li>Ensured HIPAA compliance while accelerating development.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
 

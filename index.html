@@ -6,7 +6,6 @@
   <title>Karthik Marupaka | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* Base Styles */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -39,8 +38,9 @@
       margin: 40px 0 20px;
       color: #667eea;
     }
-
-    /* Work Experience Cards */
+    .hero, .education, .certifications, .contact, footer {
+      margin-top: 40px;
+    }
     .experience-card {
       background: white;
       border-radius: 10px;
@@ -82,120 +82,146 @@
       padding-left: 20px;
       list-style: disc;
     }
-
-    /* Other Sections Placeholder Styling */
-    .hero, .education, .certifications, .contact, footer {
-      margin-top: 40px;
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Karthik Marupaka</h1>
-    <p>Agile-Driven Project Manager | Scrum Master | Healthcare & IT Specialist</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#work-experience">Experience</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>Karthik Marupaka</h1>
+  <p>Agile-Driven Project Manager | Scrum Master | Healthcare & IT Specialist</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#work-experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main class="container">
+<main class="container">
 
-    <section id="work-experience">
-      <h2 class="section-title">Work Experience</h2>
+  <section class="hero" id="about">
+    <img src="Digital Photo_Karthik Marupaka.jpg" alt="Portrait of Karthik Marupaka" loading="lazy" style="width:240px;height:240px;border-radius:50%;margin:20px;object-fit:cover;box-shadow:0 8px 16px rgba(0,0,0,0.2);" />
+    <div class="hero-text" style="text-align:center;">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I bring over a decade of experience in driving Agile and Scrum projects in healthcare and IT, leading cross-functional teams and delivering innovative solutions with precision and clarity.</p>
+      <div class="links">
+        <a href="Karthik Marupaka_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.credly.com/users/karthik-marupaka.b34212d7" target="_blank"><i class="fas fa-certificate"></i> Certifications</a>
+      </div>
+    </div>
+  </section>
 
-      <!-- Experience Card Template -->
-      <div class="experience-card">
-        <h3>Scrum Master</h3>
-        <small>Vosyn — Mar 2025 – Present | Ontario, Canada · Remote</small>
-        <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-        <div class="details">
-          <ul>
-            <li>Facilitated Scrum ceremonies for AI/ML teams working on voice cloning.</li>
-            <li>Led sprint planning for XTTS, RVC, and model enhancements.</li>
-            <li>Oversaw GCP infrastructure and cross-team collaboration.</li>
-          </ul>
-          <p><strong>Outcome:</strong> Delivered a scalable AI voice platform with high team velocity.</p>
-          <p><strong>Skills:</strong> Scrum, Agile, GCP, ML DevOps</p>
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education">
+      <div class="education-card">
+        <h3>Graduate Certificate - Project Management</h3>
+        <p>Algoma University (2023 - 2024)</p>
+      </div>
+      <div class="education-card">
+        <h3>M.Sc. Biotechnology</h3>
+        <p>Bharathidasan University (2010 - 2012)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-experience">
+    <h2 class="section-title">Work Experience</h2>
+
+    <div class="experience-card">
+      <h3>Scrum Master</h3>
+      <small>Vosyn — Mar 2025 – Present | Ontario, Canada · Remote</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <div class="details">
+        <ul>
+          <li>Facilitated Scrum ceremonies for AI/ML teams working on voice cloning.</li>
+          <li>Led sprint planning for XTTS, RVC, and model enhancements.</li>
+          <li>Oversaw GCP infrastructure and cross-team collaboration.</li>
+        </ul>
+        <p><strong>Outcome:</strong> Delivered a scalable AI voice platform with high team velocity.</p>
+        <p><strong>Skills:</strong> Scrum, Agile, GCP, ML DevOps</p>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <h3>Project Manager / Scrum Master</h3>
+      <small>PLOUTOS IT CONSULTING — Aug 2024 – Present | Canada · Remote</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <div class="details">
+        <ul>
+          <li>Led Scrum teams of data engineers, analysts, and BI developers.</li>
+          <li>Implemented enterprise-wide data governance pipelines and dashboards.</li>
+          <li>Managed collaboration across compliance, legal, and analytics teams.</li>
+        </ul>
+        <p><strong>Outcome:</strong> Decreased regulatory risk and increased data transparency.</p>
+        <p><strong>Skills:</strong> Agile, DataOps, Governance, Jira, CRM, Atlassian</p>
+      </div>
+    </div>
+
+    <!-- Add additional experience cards similarly... -->
+
+  </section>
+
+  <section id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="certifications">
+      <div class="certification-card">
+        <img src="Professional Scrum Master I_Karthik Marupaka.jpg" alt="PSM-I" loading="lazy" />
+        <div class="card-body">
+          <h3>PSM-I</h3>
+          <p>Certified Professional Scrum Master from Scrum.org</p>
         </div>
       </div>
+      <!-- Add more certs as needed -->
+    </div>
+  </section>
 
-      <div class="experience-card">
-        <h3>Project Manager / Scrum Master</h3>
-        <small>PLOUTOS IT CONSULTING — Aug 2024 – Present | Canada · Remote</small>
-        <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-        <div class="details">
-          <ul>
-            <li>Led Scrum teams of data engineers, analysts, and BI developers.</li>
-            <li>Implemented enterprise-wide data governance pipelines and dashboards.</li>
-            <li>Managed collaboration across compliance, legal, and analytics teams.</li>
-          </ul>
-          <p><strong>Outcome:</strong> Decreased regulatory risk and increased data transparency.</p>
-          <p><strong>Skills:</strong> Agile, DataOps, Governance, Jira, CRM, Atlassian</p>
-        </div>
-      </div>
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Information</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Licenses</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Karthik Marupaka</td>
+          <td><a href="mailto:karthikoct13@gmail.com">karthikoct13@gmail.com</a></td>
+          <td><a href="tel:+19057838689">905-783-8689</a></td>
+          <td>PSM-I, PSPO-I, SSM, AZ-900, JIRA Fundamentals</td>
+        </tr>
+        <tr>
+          <td colspan="4" style="text-align: center;">
+            <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank" style="color: #0077b5; font-weight: bold; text-decoration: none;">
+              <i class="fab fa-linkedin"></i> Connect with me on LinkedIn
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-      <div class="experience-card">
-        <h3>Quality Team Manager / Scrum Master</h3>
-        <small>IKS Health — Feb 2021 – Dec 2022 | Hyderabad, India · Remote</small>
-        <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-        <div class="details">
-          <ul>
-            <li>Led cross-functional Agile teams delivering healthcare IT products.</li>
-            <li>Boosted delivery velocity by 25% in under 6 months.</li>
-            <li>Acted as servant leader and Agile coach.</li>
-          </ul>
-          <p><strong>Skills:</strong> Agile Coaching, Jira, Stakeholder Comms, Product Management</p>
-        </div>
-      </div>
+</main>
 
-      <div class="experience-card">
-        <h3>Team Lead / Scrum Master</h3>
-        <small>Sutherland Healthcare — Mar 2016 – Feb 2021 | Hyderabad, India</small>
-        <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-        <div class="details">
-          <ul>
-            <li>Established Agile frameworks, improved sprint throughput by 15%.</li>
-            <li>Managed EMR project delivery and team productivity.</li>
-          </ul>
-          <p><strong>Skills:</strong> Agile Frameworks, EMR, Team Facilitation, Jira</p>
-        </div>
-      </div>
+<footer>
+  <p style="text-align:center;">&copy; 2025 Karthik Marupaka. All rights reserved.</p>
+</footer>
 
-      <div class="experience-card">
-        <h3>Azure Administrator</h3>
-        <small>e4e — Aug 2014 – Jan 2016 | Chennai, India</small>
-        <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-        <div class="details">
-          <ul>
-            <li>Maintained Azure infra for EMR systems with 99.99% uptime.</li>
-            <li>Optimized cloud cost by 15% and achieved HIPAA audit success.</li>
-            <li>Automated CI/CD and disaster recovery pipelines.</li>
-          </ul>
-          <p><strong>Skills:</strong> Azure, HIPAA Compliance, IaC, CI/CD, CloudOps</p>
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-    <p style="text-align:center;">&copy; 2025 Karthik Marupaka. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function toggleDetails(button) {
-      const details = button.nextElementSibling;
-      const expanded = details.style.display === "block";
-      details.style.display = expanded ? "none" : "block";
-      button.innerText = expanded ? "View Details" : "Hide Details";
-    }
-  </script>
+<script>
+  function toggleDetails(button) {
+    const details = button.nextElementSibling;
+    const expanded = details.style.display === "block";
+    details.style.display = expanded ? "none" : "block";
+    button.innerText = expanded ? "View Details" : "Hide Details";
+  }
+</script>
 
 </body>
 </html>
+

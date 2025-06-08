@@ -1,95 +1,107 @@
-# 🚀 Karthik Marupaka | Agile Coach | Scrum Master | Product Owner  
+# 🚀 Karthik Marupaka — Agile Coach | Scrum Master | Product Owner
 
-[![Portfolio](https://img.shields.io/badge/My%20Portfolio-Click%20Here-blue?style=for-the-badge&logo=github)](https://karthik523-sm.github.io/Portfolio/)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Karthik%20Marupaka-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/karthik-marupaka)  
-[![Email](https://img.shields.io/badge/Email-Karthikoct13%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:Karthikoct13@gmail.com)  
-
-## 👋 About Me  
-
-Hi, I'm **Karthik Marupaka**, an Agile enthusiast, Scrum Master, and Product Owner with a passion for **coaching teams, driving Agile transformations, and delivering high-impact business value**.  
-
-I bring a **strong blend of leadership, strategy, and execution**, ensuring that teams not only **deliver on time** but also **thrive in an Agile culture**. My experience spans across **software development, healthcare, and regulatory domains**, where I have helped organizations **adopt Agile mindsets, streamline workflows, and optimize product delivery**.  
-
-### 🎯 My Personal Mission  
-
-🌟 **Empower teams** to unlock their full potential through Agile methodologies  
-🌟 **Foster a culture of transparency, collaboration, and continuous learning**  
-🌟 **Drive digital transformation** by aligning Agile practices with business goals  
-🌟 **Lead with empathy and servant leadership**, enabling teams to innovate fearlessly  
+**📍 Location:** Ottawa, ON, Canada  
+**📫 Email:** [karthikoct13@gmail.com](mailto:karthikoct13@gmail.com)  
+**🔗 LinkedIn:** [linkedin.com/in/karthik-marupaka-sm523](https://www.linkedin.com/in/karthik-marupaka-sm523)  
+**🌐 Portfolio:** [karthik523-sm.github.io](https://karthik523-sm.github.io)
 
 ---
 
-## 🏆 Key Highlights  
+## 👋 About Me
 
-🔥 **Boosted team productivity by 25%** through Agile coaching & process automation  
-🔥 **Led cross-functional teams across global markets** (India, Canada, US, Europe)  
-🔥 **Implemented Agile best practices**, improving sprint velocity by 15%  
-🔥 **Managed large-scale Agile transformations**, aligning teams with strategic goals  
-🔥 **Founded [Project Masters Circle](https://www.linkedin.com/groups/Project-Masters-Circle/)** – a LinkedIn community for Agile practitioners  
+I’m Karthik Marupaka — an Agile leader, Certified Scrum Master (PSM I, SAFe® 6), and Product Owner passionate about building high-performing teams that deliver customer value quickly and consistently.
+
+With 10+ years of global experience (India 🇮🇳 | Canada 🇨🇦 | US 🇺🇸 | Europe 🇪🇺), I’ve led digital transformation efforts across AI/ML, healthcare IT, and enterprise software domains.
 
 ---
 
-## 💡 My Agile Coaching Philosophy  
+## 🎯 Personal Mission
 
-As an **Agile Coach and Scrum Master**, I believe in:  
-
-✅ **People over process** – Empowering individuals to take ownership and drive change  
-✅ **Servant leadership** – Creating an environment where teams feel psychologically safe to innovate  
-✅ **Data-driven decision making** – Using Agile metrics like velocity, cycle time, and burndown charts to continuously improve  
-✅ **Business agility** – Helping organizations pivot quickly and respond to market needs  
-
-> "Agile is not just a methodology; it’s a mindset. When teams embrace agility, they don’t just deliver software—they deliver **value**."  
+- 🌟 Empower teams through Agile values and servant leadership  
+- 🌟 Foster a culture of transparency, collaboration, and continuous learning  
+- 🌟 Drive transformation by aligning Agile practices to business goals  
+- 🌟 Lead with empathy and psychological safety to fuel innovation  
 
 ---
 
-## 💡 Core Skills  
+## 🏆 Key Achievements
 
-🔹 **Agile Frameworks:** Scrum | SAFe | Kanban | Lean  
-🔹 **Project Management:** Sprint Planning | Release Management | Roadmaps  
-🔹 **Agile Metrics:** Velocity | Cycle Time | Burndown & Burnup Charts  
-🔹 **Collaboration Tools:** Jira | Confluence | Miro | Azure DevOps | Power BI  
-🔹 **Continuous Improvement:** Retrospectives | Agile Maturity Assessment | Risk Mitigation  
-🔹 **Stakeholder Engagement:** Product Backlog Prioritization | Cross-functional Team Leadership  
+- 🔥 Boosted team productivity by 25% via Agile coaching and automation  
+- 🔥 Increased sprint velocity by 15% through continuous improvement  
+- 🔥 Delivered large-scale Agile transformations for SaaS, ML, and healthcare orgs  
+- 🔥 Founder of **Project Masters Circle** — Agile community on LinkedIn  
 
 ---
 
-## 📜 Certifications  
+## 💡 Agile Coaching Philosophy
 
-🏅 **Certified SAFe 6 Scrum Master (SSM)** – Scaled Agile, Inc.  
-🏅 **Professional Scrum Master I (PSM-I)** – Scrum.org  
-🏅 **Professional Scrum Product Owner I (PSPO-I)** – Scrum.org  
-🏅 **Microsoft Azure Fundamentals (AZ-900)** – Microsoft  
-🏅 **Jira Fundamentals** – Atlassian  
+> “Agile is not a framework, it’s a mindset. We don’t just deliver software — we deliver value.”
 
----
-
-## 💼 Professional Experience  
-
-🔹 **Scrum Master / Team Manager | IKS, India** (2021 – 2022)  
-🔹 **Team Lead / Scrum Master | Sutherland Healthcare Services, India** (2016 – 2021)  
-🔹 **Azure Administrator | e4e Healthcare Business Services** (2014 – 2016)  
+- ✅ People over process  
+- ✅ Servant leadership with empathy  
+- ✅ Agile metrics to drive insights  
+- ✅ Adaptability and business agility  
 
 ---
 
-## 📚 Education  
+## 🔧 Core Skills
 
-🎓 **Graduate Certificate in Project Management** | Algoma University, 2024  
-🎓 **M.Sc. Biotechnology** | Bharathidasan University, 2012  
-
----
-
-## 🚀 Agile Thought Leadership  
-
-I am the **founder of [Project Masters Circle](https://www.linkedin.com/groups/Project-Masters-Circle/)** – a LinkedIn group dedicated to sharing Agile insights, frameworks, and best practices.  
-
-💡 Join me in **transforming Agile teams and building high-performing organizations!** 🚀  
+- **Frameworks:** Scrum • SAFe • Kanban • Lean  
+- **Project Delivery:** Sprint Planning • Backlog Refinement • Release Management  
+- **Metrics:** Velocity • Cycle Time • Burndown Charts  
+- **Tooling:** Jira • Confluence • Azure DevOps • Power BI • Miro  
+- **Coaching & Facilitation:** Agile Maturity • Retrospectives • Risk Mitigation  
 
 ---
 
-## 📩 Let's connect!  
+## 📜 Certifications
 
-📧 **Email:** [Karthikoct13@gmail.com](mailto:Karthikoct13@gmail.com)  
-📍 **Location:** Ottawa, ON, Canada  
-🔗 **LinkedIn:** [Karthik Marupaka](https://www.linkedin.com/in/karthik-marupaka)  
+| Certification | Provider |
+|---------------|----------|
+| ✅ PSM‑I – Professional Scrum Master | Scrum.org |
+| ✅ PSPO‑I – Product Owner | Scrum.org |
+| ✅ SAFe 6 Scrum Master (SSM) | Scaled Agile, Inc. |
+| ✅ Microsoft Azure Fundamentals (AZ-900) | Microsoft |
+| ✅ Jira Fundamentals | Atlassian |
+| ✅ AI for Product Management | Pendo.io |
+| ✅ Generative AI for PMs | PMI |
 
-Let’s collaborate and make **Agile work for your teams!** 🚀  
+---
+
+## 💼 Experience (Recent Roles)
+
+- **Scrum Master** @ Vosyn (2025–Present)  
+- **Project Manager / Scrum Master** @ Ploutos (2024–Present)  
+- **Scrum Master / Team Manager** @ IKS Health (2021–2022)  
+- **Team Lead / Scrum Master** @ Sutherland (2016–2021)  
+
+[➡️ View full experience in portfolio](https://karthik523-sm.github.io/#work-experience)
+
+---
+
+## 🎓 Education
+
+- 🎓 Graduate Certificate, Project Management — Algoma University (2024)  
+- 🎓 M.Sc. Biotechnology — Bharathidasan University (2012)
+
+---
+
+## 🚀 Projects & Thought Leadership
+
+- 🎯 **[Agile Mentor GPT](https://chat.openai.com/g/g-6822a61926a08191a2cb2d535e9404ec-karthik-s-agile-mentor)** – Custom GPT built to guide Agile teams  
+- 🧩 **[Notion Kanban Template](https://lnkd.in/gssx4Gm5)** – Featured in Notion's template gallery  
+- 🧠 **Project Masters Circle** – Agile knowledge-sharing LinkedIn group  
+
+---
+
+## 📩 Let's Connect
+
+I’m always up for Agile chats, collaborations, and coaching opportunities:
+
+- ✉️ [Email Me](mailto:karthikoct13@gmail.com)  
+- 🌐 [Portfolio](https://karthik523-sm.github.io)  
+- 🔗 [LinkedIn](https://linkedin.com/in/karthik-marupaka-sm523)
+
+---
+
+Let’s transform your Agile journey — one sprint at a time! 💥

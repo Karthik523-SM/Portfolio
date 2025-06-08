@@ -3,132 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Karthik Marupaka | Portfolio</title>
+  <title>Karthik Marupaka | Agile PM Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f0f2f5, #ffffff);
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 2em;
-      margin: 40px 0 20px;
-      color: #667eea;
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .hero img {
-      width: 100%;
-      max-width: 240px;
-      height: auto;
-      border-radius: 50%;
-      margin: 20px;
-      object-fit: cover;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-    @media (min-width: 768px) {
-      .hero {
-        flex-direction: row;
-        justify-content: center;
-        text-align: left;
-      }
-      .hero-text {
-        max-width: 600px;
-        padding: 20px;
-      }
-    }
-    .experience-card, .education-card, .certification-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    .experience-card h3, .certification-card h3 {
-      color: #764ba2;
-      margin-bottom: 5px;
-    }
-    .toggle-btn {
-      background-color: #667eea;
-      color: white;
-      padding: 6px 14px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .toggle-btn:hover {
-      background-color: #5a63d8;
-    }
-    .details {
-      display: none;
-      margin-top: 15px;
-      color: #444;
-    }
-    .details ul {
-      padding-left: 20px;
-      list-style: disc;
-    }
-    .certification-card {
-      display: flex;
-      align-items: center;
-    }
-    .certification-card img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-right: 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    table th, table td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-    }
+    body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f0f2f5, #ffffff); color: #333; line-height:1.6; }
+    header { background: linear-gradient(135deg, #667eea, #764ba2); color:#fff; padding:20px 0; text-align:center; position:sticky; top:0; z-index:100; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+    nav a { color:#fff; margin:0 15px; text-decoration:none; }
+    .container { max-width:1200px; margin:auto; padding:20px; }
+    .section-title { text-align:center; font-size:2em; margin:40px 0 20px; color:#667eea; }
+    .hero { display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .hero img { width:100%; max-width:240px; border-radius:50%; margin:20px; object-fit:cover; box-shadow:0 8px 16px rgba(0,0,0,0.2); }
+    .hero-text h2 { font-size:1.8em; }
+    .dynamic-tags { margin-top:10px; font-weight:bold; font-size:1.1em; color:#444; }
+    @media(min-width:768px) { .hero { flex-direction:row; justify-content:center; text-align:left; } .hero-text { max-width:600px; padding:20px; } }
+    .experience-card, .education-card, .certification-card, .project-card { background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); margin-bottom:20px; padding:20px; }
+    .experience-card h3, .certification-card h3, .project-card h3 { color:#764ba2; margin-bottom:5px; }
+    .toggle-btn { background:#667eea; color:#fff; padding:6px 14px; border:none; border-radius:4px; cursor:pointer; margin-top:10px; }
+    .toggle-btn:hover { background:#5a63d8; }
+    .details { display:none; margin-top:15px; color:#444; }
+    .details ul { padding-left:20px; list-style:disc; }
+    .certifications-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+    .certification-card img { width:80px; height:80px; object-fit:contain; margin-bottom:10px; }
+    .project-card a { color:#667eea; font-weight:bold; text-decoration:none; }
+    table { width:100%; border-collapse:collapse; margin-top:20px; }
+    table th, table td { border:1px solid #ccc; padding:10px; text-align:left; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Karthik Marupaka</h1>
-  <p>Agile-Driven Project Manager | Scrum Master | Healthcare & IT Specialist</p>
+  <p>Agile Project Manager | Scrum Master | Tech Innovator</p>
   <nav>
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#work-experience">Experience</a>
+    <a href="#featured">Projects</a>
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -137,99 +49,185 @@
 <main class="container">
 
   <section class="hero" id="about">
-    <img src="./digital-photo_karthik-marupaka.jpg" alt="Portrait of Karthik Marupaka" />
+    <img src="./digital-photo_karthik-marupaka.jpg" alt="Portrait of Karthik Marupaka">
     <div class="hero-text">
       <h2>Welcome to My Portfolio</h2>
-      <p>I bring over a decade of experience in driving Agile and Scrum projects in healthcare and IT.</p>
+      <p class="dynamic-tags" id="tagline">Loading...</p>
+      <p>Certified Scrum Master (PSM‑I, SAFe® 6), Agile Project Manager with 10+ years in AI/ML, Healthcare IT & SaaS delivery—building high-performing teams with Azure, GCP, Jira & DataOps.</p>
       <div class="links">
         <a href="./resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
         <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://www.credly.com/users/karthik-marupaka.b34212d7" target="_blank"><i class="fas fa-certificate"></i> Certifications</a>
       </div>
     </div>
   </section>
 
   <section id="education">
     <h2 class="section-title">Education</h2>
-    <div class="education-card">
-      <h3>Graduate Certificate - Project Management</h3>
-      <p>Algoma University (2023 - 2024)</p>
-    </div>
-    <div class="education-card">
-      <h3>M.Sc. Biotechnology</h3>
-      <p>Bharathidasan University (2010 - 2012)</p>
-    </div>
+    <div class="education-card"><h3>Grad. Cert. – Project Management</h3><p>Algoma University (2023–2024)</p></div>
+    <div class="education-card"><h3>M.Sc. Biotechnology</h3><p>Bharathidasan University (2010–2012)</p></div>
   </section>
 
   <section id="work-experience">
     <h2 class="section-title">Work Experience</h2>
+
     <div class="experience-card">
-      <h3>Scrum Master</h3>
-      <small>Vosyn — Mar 2025 – Present | Ontario, Canada · Remote</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)" aria-expanded="false">View Details</button>
+      <h3>Scrum Master – Vosyn</h3>
+      <small>Mar 2025 – Present | Remote (Ontario, Canada)</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
       <div class="details">
         <ul>
-          <li>Facilitated Scrum ceremonies for AI/ML teams working on voice cloning.</li>
-          <li>Led sprint planning for XTTS, RVC, and model enhancements.</li>
-          <li>Oversaw GCP infrastructure and cross-team collaboration.</li>
+          <li>Facilitated Scrum for 6 ML + 2 cloud engineers on AI voice-cloning sprint.</li>
+          <li>Planned XTTS fine-tuning, RVC optimization & deployment schedules.</li>
+          <li>Aligned stakeholders on model release progress with Jira & Confluence.</li>
         </ul>
-        <p><strong>Outcome:</strong> Delivered a scalable AI voice platform.</p>
-        <p><strong>Skills:</strong> Scrum, Agile, GCP, ML DevOps</p>
+        <p><strong>Tools:</strong> Jira, Confluence, GCP, Python</p>
+        <p><strong>Outcome:</strong> Scalable AI voice platform delivered successfully.</p>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <h3>Project Manager / Scrum Master – Ploutos IT Consulting</h3>
+      <small>Aug 2024 – Present | Remote (Canada)</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <div class="details">
+        <ul>
+          <li>Led data engineers, analysts & BI devs in Agile execution.</li>
+          <li>Oversaw ETL, data modeling & dashboard build sprints.</li>
+          <li>Ensured smooth data flows & governance across pipelines.</li>
+        </ul>
+        <p><strong>Tools:</strong> Azure DevOps, Jira, Power BI</p>
+        <p><strong>Outcome:</strong> Increased data visibility & cut delivery delays.</p>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <h3>Quality Team Manager / Scrum Master – IKS Health</h3>
+      <small>Feb 2021 – Dec 2022 | Hyderabad, India</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <div class="details">
+        <ul>
+          <li>Led cross-functional teams of 10 to deliver healthcare IT solutions.</li>
+          <li>Improved backlog quality and sprint delivery through Agile coaching.</li>
+          <li>Enabled consistent sprint success and team autonomy.</li>
+        </ul>
+        <p><strong>Tools:</strong> Jira, Confluence</p>
+        <p><strong>Outcome:</strong> Enhanced team productivity & delivery quality.</p>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <h3>Team Lead & Scrum Master – Sutherland Healthcare Solutions</h3>
+      <small>Mar 2016 – Feb 2021 | Hyderabad, India</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <div class="details">
+        <ul>
+          <li>Championed Scrum adoption & coach across multiple teams.</li>
+          <li>Fostered self-organization, reducing supervisor oversight.</li>
+          <li>Boosted sprint completion by 15% via iterative retrospectives.</li>
+        </ul>
+        <p><strong>Tools:</strong> Jira, Confluence</p>
+        <p><strong>Outcome:</strong> Strengthened Agile culture & delivery reliability.</p>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <h3>Azure Administrator – e4e</h3>
+      <small>Aug 2014 – Jan 2016 | Chennai, India</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <div class="details">
+        <ul>
+          <li>Provisioned Azure resources for EMR across dev/test/prod.</li>
+          <li>Implemented HIPAA‑aligned policies to ensure data compliance.</li>
+          <li>Optimized infrastructure costs through monitoring.</li>
+        </ul>
+        <p><strong>Tools:</strong> Azure Portal, ARM Templates</p>
+        <p><strong>Outcome:</strong> Maintained reliable & cost-effective EMR infrastructure.</p>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <h3>Medical Coding Analyst – UnitedHealth</h3>
+      <small>Jul 2013 – Aug 2014 | Hyderabad, India</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <div class="details">
+        <ul>
+          <li>Assigned ICD‑10/CPT/HCPCS codes & validated chart accuracy.</li>
+          <li>Improved documentation via audits and feedback loops.</li>
+        </ul>
+        <p><strong>Outcome:</strong> Raised coding accuracy and reduced errors.</p>
+      </div>
+    </div>
+
+    <div class="experience-card">
+      <h3>Sr. Medical Records Coder – Dell</h3>
+      <small>Aug 2012 – Jul 2013 | Hyderabad, India</small>
+      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <div class="details">
+        <ul>
+          <li>Assigned ICD‑10/CPT/HCPCS & mentored coding staff.</li>
+          <li>Led audits for compliance and training initiatives.</li>
+        </ul>
+        <p><strong>Outcome:</strong> Ensured accurate coding and streamlined workflows.</p>
       </div>
     </div>
   </section>
 
+  <section id="featured">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="project-card"><h3>AI‑Powered Portfolio</h3><p>Built a self-driven, AI-enhanced portfolio with HTML, CSS & automated taglines.</p><a href="https://karthik523-sm.github.io" target="_blank">View Live →</a></div>
+    <div class="project-card"><h3>Agile Template Published</h3><p>Featured in Notion’s gallery for enabling Agile Kanban workflows.</p><a href="https://lnkd.in/gssx4Gm5" target="_blank">Explore Template →</a></div>
+    <div class="project-card"><h3>Gmail API Assistant</h3><p>Python tool that fetches latest 10 emails via OAuth, tracked with Jira/Confluence.</p><a href="#work-experience">Read the Story →</a></div>
+  </section>
+
   <section id="certifications">
-    <h2 class="section-title">Certifications</h2>
-    <div class="certification-card">
-      <img src="./professional-scrum-master-cert.jpg" alt="PSM-I" />
-      <div class="card-body">
-        <h3>PSM-I</h3>
-        <p>Certified Professional Scrum Master from Scrum.org</p>
-      </div>
+    <h2 class="section-title">Certifications & Badges</h2>
+    <div class="certifications-grid">
+      <div class="certification-card"><img src="./professional-scrum-master-cert.jpg" alt="PSM‑I"><h3>PSM‑I</h3><p>Scrum.org</p></div>
+      <div class="certification-card"><img src="./pspo-cert.jpg" alt="PSPO‑I"><h3>PSPO‑I</h3><p>Scrum.org</p></div>
+      <div class="certification-card"><img src="./safe-scrum-master.jpg" alt="SAFe SM"><h3>SAFe Scrum Master</h3><p>Scaled Agile</p></div>
+      <div class="certification-card"><img src="./ssm.jpg" alt="SSM"><h3>Scaled Scrum Master</h3><p>Advanced Agile</p></div>
+      <div class="certification-card"><img src="./az-900.jpg" alt="AZ‑900"><h3>AZ‑900</h3><p>Azure Fundamentals</p></div>
+      <div class="certification-card"><img src="./jira-fundamentals.jpg" alt="Jira Fundamentals"><h3>Jira Fundamentals</h3><p>Atlassian</p></div>
     </div>
+  </section>
+
+  <section id="kanban-case">
+    <h2 class="section-title">Kanban Transformation</h2>
+    <p>Implemented a 2-tier Kanban process to improve cross-team visibility and unblock flows:</p>
+    <ul><li>Portfolio-level dashboards with swimlanes</li><li>Increased transparency via Jira & Confluence</li></ul>
+    <p><em>Outcome:</em> 25% faster issue resolution and stronger team coordination.</p>
   </section>
 
   <section id="contact" class="contact">
     <h2 class="section-title">Contact Information</h2>
     <table>
-      <thead>
-        <tr>
-          <th>Name</th><th>Email</th><th>Phone</th><th>Licenses</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Licenses</th></tr></thead>
       <tbody>
-        <tr>
-          <td>Karthik Marupaka</td>
-          <td><a href="mailto:karthikoct13@gmail.com">karthikoct13@gmail.com</a></td>
-          <td><a href="tel:+19057838689">905-783-8689</a></td>
-          <td>PSM-I, PSPO-I, SSM, AZ-900, JIRA Fundamentals</td>
-        </tr>
-        <tr>
-          <td colspan="4" style="text-align: center;">
-            <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank" style="color: #0077b5; font-weight: bold;">
-              <i class="fab fa-linkedin"></i> Connect on LinkedIn
-            </a>
-          </td>
-        </tr>
+        <tr><td>Karthik Marupaka</td><td><a href="mailto:karithikoct13@gmail.com">karthikoct13@gmail.com</a></td><td><a href="tel:+19057838689">905‑783‑8689</a></td><td>PSM‑I, PSPO‑I, SAFe SM, SSM, AZ‑900, Jira Fundamentals</td></tr>
+        <tr><td colspan="4" style="text-align:center;"><a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank" style="color:#0077b5;font-weight:bold;"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a></td></tr>
       </tbody>
     </table>
   </section>
 
 </main>
 
-<footer>
-  <p style="text-align:center;">&copy; 2025 Karthik Marupaka. All rights reserved.</p>
-</footer>
+<footer><p style="text-align:center;">&copy; 2025 Karthik Marupaka. All rights reserved.</p></footer>
 
 <script>
-  function toggleDetails(button) {
-    const details = button.nextElementSibling;
-    const expanded = details.style.display === "block";
-    details.style.display = expanded ? "none" : "block";
-    button.setAttribute("aria-expanded", !expanded);
-    button.innerText = expanded ? "View Details" : "Hide Details";
+  function toggleDetails(btn) {
+    const d = btn.nextElementSibling;
+    const isVisible = d.style.display === "block";
+    d.style.display = isVisible ? "none" : "block";
+    btn.setAttribute("aria-expanded", !isVisible);
+    btn.innerText = isVisible ? "View Details" : "Hide Details";
   }
+
+  const tags = ["AI‑ML Sprint Leader", "Notion Contributor", "Gmail API Automator", "Agile DataOps Champion", "GitHub Pages Builder"];
+  let idx = 0;
+  setInterval(() => {
+    document.getElementById("tagline").textContent = tags[idx];
+    idx = (idx + 1) % tags.length;
+  }, 2000);
 </script>
 
 </body>

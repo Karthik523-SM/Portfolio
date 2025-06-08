@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #f0f2f5, #ffffff);
       color: #333;
+      line-height: 1.6;
     }
     header {
       background: linear-gradient(135deg, #667eea, #764ba2);
@@ -38,28 +40,42 @@
       margin: 40px 0 20px;
       color: #667eea;
     }
-    .hero, .education, .certifications, .contact, footer {
-      margin-top: 40px;
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .experience-card {
+    .hero img {
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      border-radius: 50%;
+      margin: 20px;
+      object-fit: cover;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+      }
+      .hero-text {
+        max-width: 600px;
+        padding: 20px;
+      }
+    }
+    .experience-card, .education-card, .certification-card {
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       margin-bottom: 20px;
       padding: 20px;
-      transition: transform 0.2s;
     }
-    .experience-card:hover {
-      transform: translateY(-5px);
-    }
-    .experience-card h3 {
+    .experience-card h3, .certification-card h3 {
       color: #764ba2;
       margin-bottom: 5px;
-    }
-    .experience-card small {
-      display: block;
-      color: #555;
-      margin-bottom: 10px;
     }
     .toggle-btn {
       background-color: #667eea;
@@ -82,6 +98,26 @@
       padding-left: 20px;
       list-style: disc;
     }
+    .certification-card {
+      display: flex;
+      align-items: center;
+    }
+    .certification-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-right: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -101,12 +137,12 @@
 <main class="container">
 
   <section class="hero" id="about">
-    <img src="digital-photo_karthik-marupaka.jpg" alt="Portrait of Karthik Marupaka" loading="lazy" style="width:240px;height:240px;border-radius:50%;margin:20px;object-fit:cover;box-shadow:0 8px 16px rgba(0,0,0,0.2);" />
-    <div class="hero-text" style="text-align:center;">
+    <img src="./digital-photo_karthik-marupaka.jpg" alt="Portrait of Karthik Marupaka" />
+    <div class="hero-text">
       <h2>Welcome to My Portfolio</h2>
-      <p>I bring over a decade of experience in driving Agile and Scrum projects in healthcare and IT, leading cross-functional teams and delivering innovative solutions with precision and clarity.</p>
+      <p>I bring over a decade of experience in driving Agile and Scrum projects in healthcare and IT.</p>
       <div class="links">
-        <a href="resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="./resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
         <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="https://www.credly.com/users/karthik-marupaka.b34212d7" target="_blank"><i class="fas fa-certificate"></i> Certifications</a>
       </div>
@@ -115,66 +151,42 @@
 
   <section id="education">
     <h2 class="section-title">Education</h2>
-    <div class="education">
-      <div class="education-card">
-        <h3>Graduate Certificate - Project Management</h3>
-        <p>Algoma University (2023 - 2024)</p>
-      </div>
-      <div class="education-card">
-        <h3>M.Sc. Biotechnology</h3>
-        <p>Bharathidasan University (2010 - 2012)</p>
-      </div>
+    <div class="education-card">
+      <h3>Graduate Certificate - Project Management</h3>
+      <p>Algoma University (2023 - 2024)</p>
+    </div>
+    <div class="education-card">
+      <h3>M.Sc. Biotechnology</h3>
+      <p>Bharathidasan University (2010 - 2012)</p>
     </div>
   </section>
 
   <section id="work-experience">
     <h2 class="section-title">Work Experience</h2>
-
     <div class="experience-card">
       <h3>Scrum Master</h3>
       <small>Vosyn — Mar 2025 – Present | Ontario, Canada · Remote</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
+      <button class="toggle-btn" onclick="toggleDetails(this)" aria-expanded="false">View Details</button>
       <div class="details">
         <ul>
           <li>Facilitated Scrum ceremonies for AI/ML teams working on voice cloning.</li>
           <li>Led sprint planning for XTTS, RVC, and model enhancements.</li>
           <li>Oversaw GCP infrastructure and cross-team collaboration.</li>
         </ul>
-        <p><strong>Outcome:</strong> Delivered a scalable AI voice platform with high team velocity.</p>
+        <p><strong>Outcome:</strong> Delivered a scalable AI voice platform.</p>
         <p><strong>Skills:</strong> Scrum, Agile, GCP, ML DevOps</p>
       </div>
     </div>
-
-    <div class="experience-card">
-      <h3>Project Manager / Scrum Master</h3>
-      <small>PLOUTOS IT CONSULTING — Aug 2024 – Present | Canada · Remote</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-      <div class="details">
-        <ul>
-          <li>Led Scrum teams of data engineers, analysts, and BI developers.</li>
-          <li>Implemented enterprise-wide data governance pipelines and dashboards.</li>
-          <li>Managed collaboration across compliance, legal, and analytics teams.</li>
-        </ul>
-        <p><strong>Outcome:</strong> Decreased regulatory risk and increased data transparency.</p>
-        <p><strong>Skills:</strong> Agile, DataOps, Governance, Jira, CRM, Atlassian</p>
-      </div>
-    </div>
-
-    <!-- Add additional experience cards similarly... -->
-
   </section>
 
   <section id="certifications">
     <h2 class="section-title">Certifications</h2>
-    <div class="certifications">
-      <div class="certification-card">
-        <img src="professional-scrum-master-cert.jpg" alt="PSM-I" loading="lazy" />
-        <div class="card-body">
-          <h3>PSM-I</h3>
-          <p>Certified Professional Scrum Master from Scrum.org</p>
-        </div>
+    <div class="certification-card">
+      <img src="./professional-scrum-master-cert.jpg" alt="PSM-I" />
+      <div class="card-body">
+        <h3>PSM-I</h3>
+        <p>Certified Professional Scrum Master from Scrum.org</p>
       </div>
-      <!-- Add more certs as needed -->
     </div>
   </section>
 
@@ -183,10 +195,7 @@
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Licenses</th>
+          <th>Name</th><th>Email</th><th>Phone</th><th>Licenses</th>
         </tr>
       </thead>
       <tbody>
@@ -198,8 +207,8 @@
         </tr>
         <tr>
           <td colspan="4" style="text-align: center;">
-            <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank" style="color: #0077b5; font-weight: bold; text-decoration: none;">
-              <i class="fab fa-linkedin"></i> Connect with me on LinkedIn
+            <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank" style="color: #0077b5; font-weight: bold;">
+              <i class="fab fa-linkedin"></i> Connect on LinkedIn
             </a>
           </td>
         </tr>
@@ -218,10 +227,10 @@
     const details = button.nextElementSibling;
     const expanded = details.style.display === "block";
     details.style.display = expanded ? "none" : "block";
+    button.setAttribute("aria-expanded", !expanded);
     button.innerText = expanded ? "View Details" : "Hide Details";
   }
 </script>
 
 </body>
 </html>
-

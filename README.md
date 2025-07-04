@@ -65,6 +65,7 @@ With 10+ years of global experience (India 🇮🇳 | Canada 🇨🇦 | US 🇺�
 | ✅ Jira Fundamentals | Atlassian |
 | ✅ AI for Product Management | Pendo.io |
 | ✅ Generative AI for PMs | PMI |
+| ✅ PMP – Project Management Professional | PMI |
 
 ---
 

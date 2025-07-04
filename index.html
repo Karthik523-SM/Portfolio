@@ -8,9 +8,10 @@
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f0f2f5, #ffffff); color: #333; line-height:1.6; }
-    header { background: linear-gradient(135deg, #667eea, #764ba2); color:#fff; padding:20px 0; text-align:center; position:sticky; top:0; z-index:100; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+    body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f9fafc, #e8ecf3); color: #333; line-height:1.6; }
+    header { background: linear-gradient(135deg, #5b6cf3, #8b5cf6); color:#fff; padding:20px 0; text-align:center; position:sticky; top:0; z-index:100; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
     nav a { color:#fff; margin:0 15px; text-decoration:none; }
+    .logo { width:60px; height:60px; vertical-align:middle; border-radius:50%; margin-bottom:10px; }
     .container { max-width:1200px; margin:auto; padding:20px; }
     .section-title { text-align:center; font-size:2em; margin:40px 0 20px; color:#667eea; }
     .hero { display:flex; flex-direction:column; align-items:center; text-align:center; }
@@ -26,6 +27,16 @@
     .details ul { padding-left:20px; list-style:disc; }
     .certifications-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
     .certification-card img { width:80px; height:80px; object-fit:contain; margin-bottom:10px; }
+    .badge-container { margin-top:15px; display:flex; flex-wrap:wrap; justify-content:center; }
+    .badge { background:#5b6cf3; color:#fff; padding:6px 12px; border-radius:20px; margin:4px; opacity:0; animation:badgeFade 0.6s forwards; }
+    .badge:nth-child(1) { animation-delay:0s; }
+    .badge:nth-child(2) { animation-delay:0.1s; }
+    .badge:nth-child(3) { animation-delay:0.2s; }
+    .badge:nth-child(4) { animation-delay:0.3s; }
+    .badge:nth-child(5) { animation-delay:0.4s; }
+    .badge:nth-child(6) { animation-delay:0.5s; }
+    .badge:nth-child(7) { animation-delay:0.6s; }
+    @keyframes badgeFade { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
     .project-card a { color:#667eea; font-weight:bold; text-decoration:none; }
     table { width:100%; border-collapse:collapse; margin-top:20px; }
     table th, table td { border:1px solid #ccc; padding:10px; text-align:left; }
@@ -34,6 +45,7 @@
 <body>
 
 <header>
+  <img src="./logo.svg" alt="Karthik Marupaka logo" class="logo">
   <h1>Karthik Marupaka</h1>
   <p>Agile Project Manager | Scrum Master | Tech Innovator</p>
   <nav>
@@ -41,7 +53,6 @@
     <a href="#education">Education</a>
     <a href="#work-experience">Experience</a>
     <a href="#featured">Projects</a>
-    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -57,6 +68,15 @@
       <div class="links">
         <a href="./Karthik Marupaka_Resume.docx" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
         <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+      <div class="badge-container">
+        <span class="badge">PSM I</span>
+        <span class="badge">PSPO I</span>
+        <span class="badge">SAFe SM</span>
+        <span class="badge">AZ-900</span>
+        <span class="badge">Jira Fundamentals</span>
+        <span class="badge">AI PM</span>
+        <span class="badge">PMP</span>
       </div>
     </div>
   </section>
@@ -179,22 +199,7 @@
     <div class="project-card"><h3>Gmail API Assistant</h3><p>Python tool that fetches latest 10 emails via OAuth, tracked with Jira/Confluence.</p><a href="#work-experience">Read the Story →</a></div>
   </section>
 
-  <section id="certifications">
-  <h2 class="section-title">Certifications & Badges</h2>
 
-  <div style="text-align: center;">
-    <img src="./badges/psm1.png" alt="PSM I" title="Professional Scrum Master I" height="80" style="margin: 10px;">
-    <img src="./badges/pspo1.png" alt="PSPO I" title="Professional Scrum Product Owner I" height="80" style="margin: 10px;">
-    <img src="./badges/safe.png" alt="SAFe Scrum Master" title="Certified SAFe Scrum Master" height="80" style="margin: 10px;">
-    <img src="./badges/az900.png" alt="AZ-900" title="Microsoft Azure Fundamentals" height="80" style="margin: 10px;">
-    <img src="./badges/jira.png" alt="Jira Fundamentals" title="Jira Fundamentals" height="80" style="margin: 10px;">
-    <img src="./badges/ai-pm.png" alt="AI for Product Management" title="AI for Product Management" height="80" style="margin: 10px;">
-  </div>
-
-  <p style="text-align: center; margin-top: 15px;">
-    ✅ PSM I • ✅ PSPO I • ✅ SAFe SM • ✅ AZ‑900 • ✅ Jira Fundamentals • ✅ AI for PM
-  </p>
-</section>
 
 
   <section id="kanban-case">
@@ -209,7 +214,7 @@
     <table>
       <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Licenses</th></tr></thead>
       <tbody>
-        <tr><td>Karthik Marupaka</td><td><a href="mailto:karithikoct13@gmail.com">karthikoct13@gmail.com</a></td><td><a href="tel:+19057838689">905‑783‑8689</a></td><td>PSM‑I, PSPO‑I, SAFe SM, SSM, AZ‑900, Jira Fundamentals</td></tr>
+        <tr><td>Karthik Marupaka</td><td><a href="mailto:karithikoct13@gmail.com">karthikoct13@gmail.com</a></td><td><a href="tel:+19057838689">905‑783‑8689</a></td><td>PSM‑I, PSPO‑I, SAFe SM, SSM, AZ‑900, Jira Fundamentals, PMP</td></tr>
         <tr><td colspan="4" style="text-align:center;"><a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank" style="color:#0077b5;font-weight:bold;"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a></td></tr>
       </tbody>
     </table>

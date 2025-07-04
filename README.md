@@ -54,21 +54,6 @@ With 10+ years of global experience (India 🇮🇳 | Canada 🇨🇦 | US 🇺�
 
 ---
 
-## 📜 Certifications
-
-| Certification | Provider |
-|---------------|----------|
-| ✅ PSM‑I – Professional Scrum Master | Scrum.org |
-| ✅ PSPO‑I – Product Owner | Scrum.org |
-| ✅ SAFe 6 Scrum Master (SSM) | Scaled Agile, Inc. |
-| ✅ Microsoft Azure Fundamentals (AZ-900) | Microsoft |
-| ✅ Jira Fundamentals | Atlassian |
-| ✅ AI for Product Management | Pendo.io |
-| ✅ Generative AI for PMs | PMI |
-| ✅ PMP – Project Management Professional | PMI |
-
----
-
 ## 💼 Experience (Recent Roles)
 
 - **Scrum Master** @ Vosyn (2025–Present)  

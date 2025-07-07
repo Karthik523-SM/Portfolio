@@ -3,7 +3,7 @@
 **📍 Location:** Ottawa, ON, Canada  
 **📫 Email:** [karthikoct13@gmail.com](mailto:karthikoct13@gmail.com)  
 **🔗 LinkedIn:** [linkedin.com/in/karthik-marupaka-sm523](https://www.linkedin.com/in/karthik-marupaka-sm523)  
-**🌐 Portfolio:** [karthik523-sm.github.io](https://karthik523-sm.github.io)
+**🌐 Portfolio:** [karthik523-sm.github.io](https://karthik523-sm.github.io/Portfolio/)
 
 ---
 
@@ -85,7 +85,7 @@ With 10+ years of global experience (India 🇮🇳 | Canada 🇨🇦 | US 🇺�
 I’m always up for Agile chats, collaborations, and coaching opportunities:
 
 - ✉️ [Email Me](mailto:karthikoct13@gmail.com)  
-- 🌐 [Portfolio](https://karthik523-sm.github.io)  
+- 🌐 [Portfolio](https://karthik523-sm.github.io/Portfolio/)  
 - 🔗 [LinkedIn](https://linkedin.com/in/karthik-marupaka-sm523)
 
 ---

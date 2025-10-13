@@ -1,225 +1,338 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Karthik Marupaka | Agile PM Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { font-family:'Poppins', sans-serif; background:linear-gradient(120deg,#f5f7ff,#dfe7fd); color:#333; line-height:1.6; }
-header { background:linear-gradient(120deg,#2575fc,#6a11cb); color:#fff; padding:20px 0; text-align:center; position:sticky; top:0; z-index:100; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
-nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:600; }
-.logo { width:60px; height:60px; vertical-align:middle; border-radius:50%; margin-bottom:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-.container { max-width:1200px; margin:auto; padding:20px; }
-.section-title { text-align:center; font-size:2em; margin:40px 0 20px; color:#2575fc; }
-.hero { display:flex; flex-direction:column; align-items:center; text-align:center; }
-.hero img { width:100%; max-width:240px; border-radius:50%; margin:20px; object-fit:cover; box-shadow:0 8px 16px rgba(0,0,0,0.2); }
-.hero-text h2 { font-size:1.8em; }
-.dynamic-tags { margin-top:10px; font-weight:600; font-size:1.1em; color:#333; }
-@media(min-width:768px) { .hero { flex-direction:row; justify-content:center; text-align:left; } .hero-text { max-width:600px; padding:20px; } }
-.experience-card, .education-card, .project-card { background:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); margin-bottom:20px; padding:20px; }
-.experience-card h3, .project-card h3 { color:#6a11cb; margin-bottom:5px; }
-.toggle-btn { background:#2575fc; color:#fff; padding:6px 14px; border:none; border-radius:4px; cursor:pointer; margin-top:10px; }
-.toggle-btn:hover { background:#1b5adf; }
-.details { display:none; margin-top:15px; color:#444; }
-.details ul { padding-left:20px; list-style:disc; }
-.project-card a { color:#2575fc; font-weight:bold; text-decoration:none; }
-table { width:100%; border-collapse:collapse; margin-top:20px; }
-table th, table td { border:1px solid #ccc; padding:10px; text-align:left; }
-  </style>
-</head>
-<body>
+import React from "react";
+import { motion } from "framer-motion";
 
-<header>
-  <img src="./KM.png" alt="Karthik Marupaka logo" class="logo">
-  <h1>Karthik Marupaka</h1>
-  <p>Agile Project Manager | Scrum Master | Tech Innovator</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#work-experience">Experience</a>
-    <a href="#featured">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+// --- Helpers ---
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
-<main class="container">
+const stagger = {
+  show: { transition: { staggerChildren: 0.08 } },
+};
 
-  <section class="hero" id="about">
-    <img src="./digital-photo_karthik-marupaka.jpg" alt="Portrait of Karthik Marupaka">
-    <div class="hero-text">
-      <h2>Welcome to My Portfolio</h2>
-      <p class="dynamic-tags" id="tagline">Loading...</p>
-      <p>Certified Scrum Master (PSM‑I, SAFe® 6), Agile Project Manager with 10+ years in AI/ML, Healthcare IT & SaaS delivery—building high-performing teams with Azure, GCP, Jira & DataOps.</p>
-      <div class="links">
-        <a href="./Karthik Marupaka_Resume.docx" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
-        <a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
+const Section = ({ id, title, subtitle, children }: any) => (
+  <section id={id} className="relative py-20 sm:py-28">
+    <div className="absolute inset-0 pointer-events-none">
+      <div className="mx-auto max-w-6xl h-full opacity-40 blur-3xl" style={{
+        background: "radial-gradient(600px 200px at 50% 0%, rgba(92,107,247,.20), transparent 60%)",
+      }}/>
+    </div>
+    <div className="relative mx-auto max-w-6xl px-6">
+      <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+        <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900">
+          {title}
+        </motion.h2>
+        {subtitle && (
+          <motion.p variants={fadeUp} className="mt-2 text-slate-600 max-w-2xl">{subtitle}</motion.p>
+        )}
+        <div className="mt-10">{children}</div>
+      </motion.div>
     </div>
   </section>
+);
 
-  <section id="education">
-    <h2 class="section-title">Education</h2>
-    <div class="education-card"><h3>Grad. Cert. – Project Management</h3><p>Algoma University (2023–2024)</p></div>
-    <div class="education-card"><h3>M.Sc. Biotechnology</h3><p>Bharathidasan University (2010–2012)</p></div>
-  </section>
+const Badge = ({ children }: any) => (
+  <span className="inline-flex items-center rounded-full border border-indigo-200 bg-white/70 px-3 py-1 text-xs font-medium text-indigo-700 shadow-sm backdrop-blur">
+    {children}
+  </span>
+);
 
-  <section id="work-experience">
-    <h2 class="section-title">Work Experience</h2>
+const Card = ({ children }: any) => (
+  <div className="group rounded-2xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur transition-all hover:-translate-y-1 hover:shadow-xl">
+    {children}
+  </div>
+);
 
-    <div class="experience-card">
-      <h3>Scrum Master – Vosyn</h3>
-      <small>Mar 2025 – Present | Remote (Ontario, Canada)</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-      <div class="details">
-        <ul>
-          <li>Facilitated Scrum for 6 ML + 2 cloud engineers on AI voice-cloning sprint.</li>
-          <li>Planned XTTS fine-tuning, RVC optimization & deployment schedules.</li>
-          <li>Aligned stakeholders on model release progress with Jira & Confluence.</li>
-        </ul>
-        <p><strong>Tools:</strong> Jira, Confluence, GCP, Python</p>
-        <p><strong>Outcome:</strong> Scalable AI voice platform delivered successfully.</p>
-      </div>
+const Divider = () => <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent"/>;
+
+export default function PremiumPortfolio() {
+  return (
+    <div className="min-h-screen w-full scroll-smooth bg-[#F7F9FC] text-slate-800">
+      {/* Top gradient bar */}
+      <div className="fixed inset-x-0 top-0 z-40 h-1.5 bg-gradient-to-r from-indigo-600 via-violet-500 to-indigo-600" />
+
+      {/* Navbar */}
+      <nav className="sticky top-0 z-30 backdrop-blur bg-white/70 border-b border-slate-200/70">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex items-center justify-between h-16">
+            <a href="#home" className="font-extrabold tracking-tight text-slate-900 text-lg">
+              KARTHIK <span className="text-indigo-600">MARUPAKA</span>
+            </a>
+            <div className="hidden md:flex items-center gap-6 text-sm">
+              <a href="#about" className="hover:text-indigo-600">About</a>
+              <a href="#experience" className="hover:text-indigo-600">Experience</a>
+              <a href="#projects" className="hover:text-indigo-600">Projects</a>
+              <a href="#skills" className="hover:text-indigo-600">Skills</a>
+              <a href="#testimonials" className="hover:text-indigo-600">Praise</a>
+              <a href="#contact" className="hover:text-indigo-600">Contact</a>
+            </div>
+            <div className="flex items-center gap-3">
+              <a
+                href="#contact"
+                className="rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-medium text-indigo-700 shadow-sm hover:shadow transition"
+              >
+                Contact
+              </a>
+              <a
+                href="#resume"
+                className="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-indigo-500 transition"
+              >
+                View Résumé
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <header id="home" className="relative overflow-hidden">
+        <div className="absolute -z-10 inset-0 bg-gradient-to-b from-[#1E2A78] to-[#5C6BF7]" />
+        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{duration:.6}}>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs text-indigo-100 ring-1 ring-white/20">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Open to Senior Scrum Master / Agile PM Roles
+              </div>
+              <h1 className="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+                Agile Project Manager & Scrum Master
+              </h1>
+              <p className="mt-4 text-indigo-100/90 leading-relaxed max-w-xl">
+                DataOps advocate with 10+ years across AI/ML, Healthcare IT & SaaS. I coach high‑performing teams and ship reliable outcomes with Azure, Jira, Confluence & modern DevOps.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a href="#projects" className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-indigo-700 shadow hover:shadow-lg">Explore Projects</a>
+                <a href="#experience" className="rounded-xl bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/20">See Experience</a>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <Badge>PSM‑I</Badge>
+                <Badge>SAFe 6</Badge>
+                <Badge>PSPO‑I</Badge>
+                <Badge>Azure</Badge>
+                <Badge>Jira & Confluence</Badge>
+              </div>
+            </motion.div>
+            <motion.div initial={{opacity:0, scale:.95}} animate={{opacity:1, scale:1}} transition={{duration:.7}} className="justify-self-center">
+              <div className="relative">
+                <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-white/30 to-transparent blur-xl" />
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+                  alt="Karthik portrait"
+                  className="relative z-10 aspect-square w-72 sm:w-80 rounded-[2rem] object-cover shadow-2xl ring-1 ring-white/40"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </header>
+
+      {/* About */}
+      <Section id="about" title="About" subtitle="Calm, outcome‑driven servant leader. I enable clarity, cadence, and continuous improvement.">
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card>
+            <h3 className="text-base font-semibold">What I Do</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Coach teams to ship value predictably. Facilitate Scrum events, streamline flow with Kanban, and instrument delivery using actionable metrics: velocity, CFD, cycle & lead time, throughput.
+            </p>
+          </Card>
+          <Card>
+            <h3 className="text-base font-semibold">How I Work</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Data‑informed, people‑first. Empathy in 1:1s, crisp stakeholder comms, lightweight governance, and risk‑based planning. I combine Agile for apps with pragmatic waterfall for infra/compliance.
+            </p>
+          </Card>
+          <Card>
+            <h3 className="text-base font-semibold">Impact</h3>
+            <ul className="mt-2 space-y-2 text-sm text-slate-600 list-disc list-inside">
+              <li>↑ 15% team productivity, ↓ 20% delays via proactive risk mgmt</li>
+              <li>0 external audit findings on fraud‑detection modernization</li>
+              <li>Scaled reviews across 6 Scrum teams with clear outcomes</li>
+            </ul>
+          </Card>
+        </div>
+      </Section>
+
+      <Divider />
+
+      {/* Experience */}
+      <Section id="experience" title="Experience" subtitle="A concise timeline of roles with quantified outcomes.">
+        <div className="relative">
+          <div className="absolute left-4 sm:left-1/2 h-full w-px -translate-x-1/2 bg-slate-200"/>
+          <div className="space-y-8">
+            {[
+              {
+                title: "Scrum Master — Vosyn",
+                time: "Mar 2025 – Present · Remote (Canada)",
+                bullets: [
+                  "Coached multi‑team cadence; improved WIP discipline and flow.",
+                  "Brought visibility with Jira dashboards and Confluence agreements.",
+                ],
+              },
+              {
+                title: "Project Manager / Scrum Master — Ploutos IT Consulting",
+                time: "Aug 2024 – Present · Remote (Canada)",
+                bullets: [
+                  "Delivered product increments with hybrid governance; aligned stakeholders.",
+                ],
+              },
+              {
+                title: "Quality Team Manager / Scrum Master — IKS Health",
+                time: "Feb 2021 – Dec 2022 · Hyderabad, India",
+                bullets: [
+                  "Improved throughput with Kanban, reduced blockers; robust DoD/DoR.",
+                ],
+              },
+            ].map((role, idx) => (
+              <motion.div key={idx} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="relative">
+                <div className="sm:grid sm:grid-cols-2 sm:gap-8">
+                  <div className="sm:text-right sm:pr-10">
+                    <div className="inline-flex items-center gap-3 rounded-xl bg-white/70 px-4 py-3 shadow-sm border border-slate-200">
+                      <span className="h-3 w-3 rounded-full bg-indigo-600"/>
+                      <div>
+                        <p className="font-medium">{role.title}</p>
+                        <p className="text-xs text-slate-500">{role.time}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="sm:pl-10 mt-4 sm:mt-0">
+                    <ul className="space-y-2 text-sm text-slate-700 list-disc list-inside">
+                      {role.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Divider />
+
+      {/* Projects */}
+      <Section id="projects" title="Featured Projects" subtitle="Case‑study style cards with live links and stack badges.">
+        <div className="grid md:grid-cols-3 gap-6">
+          {[{
+            name: "AI‑Powered Portfolio",
+            desc: "Self‑driven, AI‑enhanced portfolio with automation hooks.",
+            badges: ["HTML", "CSS", "AI"],
+            link: "#",
+          },{
+            name: "Agile Template (Notion)",
+            desc: "Published template enabling Agile Kanban workflows.",
+            badges: ["Notion", "Kanban"],
+            link: "#",
+          },{
+            name: "Gmail API Assistant",
+            desc: "OAuth Python tool fetching latest emails; tracked with Jira/Confluence.",
+            badges: ["Python", "OAuth", "Jira"],
+            link: "#",
+          }].map((p, i) => (
+            <a key={i} href={p.link} className="block">
+              <Card>
+                <div className="aspect-video w-full rounded-xl bg-gradient-to-br from-indigo-50 to-white border border-slate-100 mb-4" />
+                <h3 className="text-base font-semibold">{p.name}</h3>
+                <p className="mt-2 text-sm text-slate-600">{p.desc}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {p.badges.map((b, j) => <Badge key={j}>{b}</Badge>)}
+                </div>
+                <div className="mt-4 text-sm font-medium text-indigo-700">View →</div>
+              </Card>
+            </a>
+          ))}
+        </div>
+      </Section>
+
+      <Divider />
+
+      {/* Skills */}
+      <Section id="skills" title="Skills & Tools" subtitle="A quick visual heatmap of my core strengths.">
+        <div className="grid md:grid-cols-2 gap-8">
+          <Card>
+            <h3 className="text-sm font-semibold">Delivery & Coaching</h3>
+            <div className="mt-4 space-y-4">
+              {[
+                ["Scrum / Kanban Coaching", 95],
+                ["Facilitation & Stakeholder Comms", 92],
+                ["Metrics (Velocity, CFD, Cycle/Lead Time)", 90],
+                ["Risk‑based Planning", 88],
+              ].map(([label, pct]: any, i: number) => (
+                <div key={i}>
+                  <div className="flex justify-between text-xs text-slate-600">
+                    <span>{label}</span><span>{pct}%</span>
+                  </div>
+                  <div className="mt-1 h-2 w-full rounded-full bg-slate-200">
+                    <div className="h-2 rounded-full bg-gradient-to-r from-indigo-600 to-violet-500" style={{ width: `${pct}%` }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+          <Card>
+            <h3 className="text-sm font-semibold">Tech Stack</h3>
+            <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
+              {["Jira", "Confluence", "Azure", "Power BI", "Python", "Notion", "GitHub", "CI/CD"].map((t, i) => (
+                <div key={i} className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white/60 px-3 py-2">
+                  <span className="h-2 w-2 rounded-full bg-indigo-500"/> {t}
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      </Section>
+
+      <Divider />
+
+      {/* Testimonials */}
+      <Section id="testimonials" title="Praise & Endorsements" subtitle="Signals of trust from leaders and collaborators.">
+        <div className="grid md:grid-cols-3 gap-6">
+          {["Karthik’s Agile leadership transformed our delivery cadence.", "Calm under pressure; turns chaos into simple, trackable plans.", "Executive‑ready updates; stakeholders trust his data and his judgment."].map((q, i) => (
+            <Card key={i}>
+              <p className="text-sm leading-relaxed text-slate-700">“{q}”</p>
+              <div className="mt-4 text-xs text-slate-500">— Reference available on request</div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      <Divider />
+
+      {/* Contact / CTA */}
+      <Section id="contact" title="Let’s build something reliable" subtitle="Toronto / Remote • Open to Senior Scrum Master, Agile PM, or Delivery Lead roles">
+        <div className="grid md:grid-cols-3 gap-6 items-center">
+          <Card>
+            <div className="text-sm">
+              <div><span className="font-semibold">Email:</span> <a className="text-indigo-700" href="mailto:karthikoc13@gmail.com">karthikoc13@gmail.com</a></div>
+              <div className="mt-1"><span className="font-semibold">Phone:</span> <a className="text-indigo-700" href="tel:+19057838689">+1 (905) 783‑8689</a></div>
+              <div className="mt-1"><span className="font-semibold">LinkedIn:</span> <a className="text-indigo-700" href="#">Connect</a></div>
+            </div>
+          </Card>
+          <Card>
+            <h3 className="text-base font-semibold">Résumé Snapshot</h3>
+            <p className="mt-2 text-sm text-slate-600">Download a one‑page executive résumé tailored for Senior Scrum Master roles.</p>
+            <a href="#resume" className="mt-4 inline-flex rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-500">Download PDF</a>
+          </Card>
+          <Card>
+            <h3 className="text-base font-semibold">Newsletter</h3>
+            <p className="mt-2 text-sm text-slate-600">Monthly note on Agile metrics, facilitation tips, and case studies.</p>
+            <button className="mt-4 inline-flex rounded-xl border border-indigo-200 bg-white px-4 py-2 text-sm font-semibold text-indigo-700 shadow hover:shadow-md">Subscribe</button>
+          </Card>
+        </div>
+      </Section>
+
+      {/* Footer */}
+      <footer className="relative overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"/>
+        <div className="mx-auto max-w-6xl px-6 py-10">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+            <div>© {new Date().getFullYear()} Karthik Marupaka. All rights reserved.</div>
+            <div className="flex items-center gap-4">
+              <a href="#about" className="hover:text-slate-700">About</a>
+              <a href="#projects" className="hover:text-slate-700">Projects</a>
+              <a href="#contact" className="hover:text-slate-700">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <div class="experience-card">
-      <h3>Project Manager / Scrum Master – Ploutos IT Consulting</h3>
-      <small>Aug 2024 – Present | Remote (Canada)</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-      <div class="details">
-        <ul>
-          <li>Led data engineers, analysts & BI devs in Agile execution.</li>
-          <li>Oversaw ETL, data modeling & dashboard build sprints.</li>
-          <li>Ensured smooth data flows & governance across pipelines.</li>
-        </ul>
-        <p><strong>Tools:</strong> Azure DevOps, Jira, Power BI</p>
-        <p><strong>Outcome:</strong> Increased data visibility & cut delivery delays.</p>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <h3>Quality Team Manager / Scrum Master – IKS Health</h3>
-      <small>Feb 2021 – Dec 2022 | Hyderabad, India</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-      <div class="details">
-        <ul>
-          <li>Led cross-functional teams of 10 to deliver healthcare IT solutions.</li>
-          <li>Improved backlog quality and sprint delivery through Agile coaching.</li>
-          <li>Enabled consistent sprint success and team autonomy.</li>
-        </ul>
-        <p><strong>Tools:</strong> Jira, Confluence</p>
-        <p><strong>Outcome:</strong> Enhanced team productivity & delivery quality.</p>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <h3>Team Lead & Scrum Master – Sutherland Healthcare Solutions</h3>
-      <small>Mar 2016 – Feb 2021 | Hyderabad, India</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-      <div class="details">
-        <ul>
-          <li>Championed Scrum adoption & coach across multiple teams.</li>
-          <li>Fostered self-organization, reducing supervisor oversight.</li>
-          <li>Boosted sprint completion by 15% via iterative retrospectives.</li>
-        </ul>
-        <p><strong>Tools:</strong> Jira, Confluence</p>
-        <p><strong>Outcome:</strong> Strengthened Agile culture & delivery reliability.</p>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <h3>Azure Administrator – e4e</h3>
-      <small>Aug 2014 – Jan 2016 | Chennai, India</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-      <div class="details">
-        <ul>
-          <li>Provisioned Azure resources for EMR across dev/test/prod.</li>
-          <li>Implemented HIPAA‑aligned policies to ensure data compliance.</li>
-          <li>Optimized infrastructure costs through monitoring.</li>
-        </ul>
-        <p><strong>Tools:</strong> Azure Portal, ARM Templates</p>
-        <p><strong>Outcome:</strong> Maintained reliable & cost-effective EMR infrastructure.</p>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <h3>Medical Coding Analyst – UnitedHealth</h3>
-      <small>Jul 2013 – Aug 2014 | Hyderabad, India</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-      <div class="details">
-        <ul>
-          <li>Assigned ICD‑10/CPT/HCPCS codes & validated chart accuracy.</li>
-          <li>Improved documentation via audits and feedback loops.</li>
-        </ul>
-        <p><strong>Outcome:</strong> Raised coding accuracy and reduced errors.</p>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <h3>Sr. Medical Records Coder – Dell</h3>
-      <small>Aug 2012 – Jul 2013 | Hyderabad, India</small>
-      <button class="toggle-btn" onclick="toggleDetails(this)">View Details</button>
-      <div class="details">
-        <ul>
-          <li>Assigned ICD‑10/CPT/HCPCS & mentored coding staff.</li>
-          <li>Led audits for compliance and training initiatives.</li>
-        </ul>
-        <p><strong>Outcome:</strong> Ensured accurate coding and streamlined workflows.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="featured">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="project-card"><h3>AI‑Powered Portfolio</h3><p>Built a self-driven, AI-enhanced portfolio with HTML, CSS & automated taglines.</p><a href="https://karthik523-sm.github.io" target="_blank">View Live →</a></div>
-    <div class="project-card"><h3>Agile Template Published</h3><p>Featured in Notion’s gallery for enabling Agile Kanban workflows.</p><a href="https://lnkd.in/gssx4Gm5" target="_blank">Explore Template →</a></div>
-    <div class="project-card"><h3>Gmail API Assistant</h3><p>Python tool that fetches latest 10 emails via OAuth, tracked with Jira/Confluence.</p><a href="#work-experience">Read the Story →</a></div>
-  </section>
-
-
-
-
-  <section id="kanban-case">
-    <h2 class="section-title">Kanban Transformation</h2>
-    <p>Implemented a 2-tier Kanban process to improve cross-team visibility and unblock flows:</p>
-    <ul><li>Portfolio-level dashboards with swimlanes</li><li>Increased transparency via Jira & Confluence</li></ul>
-    <p><em>Outcome:</em> 25% faster issue resolution and stronger team coordination.</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2 class="section-title">Contact Information</h2>
-    <table>
-      <thead><tr><th>Name</th><th>Email</th><th>Phone</th></tr></thead>
-      <tbody>
-        <tr><td>Karthik Marupaka</td><td><a href="mailto:karithikoct13@gmail.com">karthikoct13@gmail.com</a></td><td><a href="tel:+19057838689">905‑783‑8689</a></td></tr>
-        <tr><td colspan="3" style="text-align:center;"><a href="https://www.linkedin.com/in/karthik-marupaka-sm523/" target="_blank" style="color:#0077b5;font-weight:bold;"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a></td></tr>
-      </tbody>
-    </table>
-  </section>
-
-</main>
-
-<footer><p style="text-align:center;">&copy; 2025 Karthik Marupaka. All rights reserved.</p></footer>
-
-<script>
-  function toggleDetails(btn) {
-    const d = btn.nextElementSibling;
-    const isVisible = d.style.display === "block";
-    d.style.display = isVisible ? "none" : "block";
-    btn.setAttribute("aria-expanded", !isVisible);
-    btn.innerText = isVisible ? "View Details" : "Hide Details";
-  }
-
-  const tags = ["Agile Guru", "DataOps Advocate", "Cloud Enthusiast", "DevOps Facilitator", "Scrum Evangelist"];
-  let idx = 0;
-  setInterval(() => {
-    document.getElementById("tagline").textContent = tags[idx];
-    idx = (idx + 1) % tags.length;
-  }, 2000);
-</script>
-
-</body>
-</html>
+  );
+}
